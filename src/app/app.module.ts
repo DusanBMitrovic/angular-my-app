@@ -1,7 +1,7 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
-import {ReactiveFormsModule} from '@angular/forms';
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import { ReactiveFormsModule } from '@angular/forms';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -16,16 +16,9 @@ import { HomeComponent } from './components/home/home.component';
     RegisterComponent,
     HomeComponent
   ],
-  imports: [
-    NgbModule,
-    BrowserModule,
-    AppRoutingModule,
-    ReactiveFormsModule
-  ],
-  entryComponents: [
-    RegisterComponent
-  ],
+  imports: [NgbModule, BrowserModule, AppRoutingModule, ReactiveFormsModule],
+  entryComponents: [RegisterComponent, LoginComponent],
   providers: [],
   bootstrap: [AppComponent]
 })
-export class AppModule { }
+export class AppModule {}

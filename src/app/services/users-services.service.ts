@@ -6,8 +6,7 @@ import { Injectable } from '@angular/core';
 export class UsersServicesService {
   users = [];
 
-
-  constructor() { }
+  constructor() {}
 
   addUser(user: any) {
     this.users.push(user);
@@ -15,5 +14,13 @@ export class UsersServicesService {
 
   getUsers() {
     return this.users;
+  }
+
+  validUser(name: string) {
+    if (this.users.filter(user => user.name === name).length === 0) {
+      return false;
+    } else {
+      return true;
+    }
   }
 }

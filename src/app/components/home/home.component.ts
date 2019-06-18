@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-import {NgbModal } from '@ng-bootstrap/ng-bootstrap';
+import { NgbModal } from '@ng-bootstrap/ng-bootstrap';
 import { RegisterComponent } from '../register/register.component';
+import { LoginComponent } from '../login/login.component';
 
 @Component({
   selector: 'app-home',
@@ -8,16 +9,15 @@ import { RegisterComponent } from '../register/register.component';
   styleUrls: ['./home.component.css']
 })
 export class HomeComponent implements OnInit {
+  constructor(private modalService: NgbModal) {}
 
-  constructor(private modalService: NgbModal) { }
-
-  open(){
-    console.log("AsdASDAS");
-    let modalRef = this.modalService.open(RegisterComponent);
-    
+  openRegister() {
+    this.modalService.open(RegisterComponent);
   }
 
-  ngOnInit() {
+  openLogin() {
+    this.modalService.open(LoginComponent);
   }
 
+  ngOnInit() {}
 }
